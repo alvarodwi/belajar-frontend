@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Random Country</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <div class="jumbotron">
+      <h1><b>Random Country</b></h1>
+      <p>Serving random country data on your fingertips</p>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <div class="nav-container">
+        <h1 id="nav-title">...RandomCountry...</h1>
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="#overview">Overview</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#language">Language</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#codes">Codes</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#geography">Geography</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      <loading-view></loading-view>
+      <country-item class="hidden"></country-item>
+      <credits-section></credits-section>
+    </div>
+  </main>
+
+  <footer id="footer" class="">
+    &#169; 2020 - Random Country
+  </footer>
+
+  <floating-action-btn></floating-action-btn>
+</body>
+
+</html>

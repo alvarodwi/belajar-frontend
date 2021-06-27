@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+ box-sizing: border-box;
+}
+
+html {
+ scroll-behavior: smooth;
+}
+
+body {
+ font-family: 'Lato', sans-serif;
+ margin: 0;
+ padding: 0;
+}
+
+/* styling untuk header web */
+
+.jumbotron {
+ font-size: 1.2em;
+ padding: 20px;
+ background-color: #3D5A80;
+ text-align: center;
+ color: white;
+}
+
+.nav-wrapper {
+ padding-top: .5em;
+ padding-bottom: .5em;
+ background-color: #98C1D9;
+ overflow: hidden;
+}
+
+.nav-word {
+ margin: 0 0 0 10px;
+ font-size: 1.2em;
+ text-align: center;
+ color: white;
+}
+
+.nav-list {
+ margin: 0 0 0 0;
+ padding: 5px;
+ list-style: none;
+}
+
+.nav-wrapper a {
+ padding: 10px 15px;
+ text-align: center;
+ display: block;
+ color: white;
+ font-size: 1em;
+ text-decoration: none;
+ text-transform: uppercase;
+}
+
+.nav-wrapper a:hover {
+ color: #718daa;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+ position: fixed;
+ top: 0;
+ width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+#content {
+ padding-top: 60px;
+}
+
+.hidden {
+ display: none;
+}
+
+/* styling untuk content web */
+
+/* flex! */
+
+#content {
+ display: flex;
+ flex-direction: column;
+ margin: auto;
+ width: 80%;
+ text-align: justify;
+ padding: 20px;
+}
+
+.box.main {
+ flex-grow: 3;
+}
+
+.box.sub {
+ flex-grow: 1;
+ justify-content: flex-start;
+}
+
+/* other styling */
+
+.word-text {
+ font-size: 2.5em;
+ letter-spacing: 2px;
+ margin: 0;
+ padding: 0;
+}
+
+.box.sub>p {
+ padding: 0;
+ margin: 10px 0 0 0;
+}
+
+.box.sub>h2 {
+ text-transform: capitalize;
+ font-size: 1.5em;
+ padding: 0;
+ line-height: normal;
+ margin: 15px 0 15px 0;
+}
+
+.box.sub>h3 {
+ text-transform: capitalize;
+ font-size: 1.2em;
+ padding: 0;
+ margin: 15px 0 0 0;
+}
+
+.box.sub ul li {
+ margin: 10px 5px 0 0;
+}
+
+.box.sub>img {
+ margin: 15px 5px 0 5px;
+ text-align: start;
+}
+
+/* styling untuk aside web */
+
+aside {
+ margin-top: 20px;
+}
+
+.profile {
+ display: flex;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ padding: 20px;
+ border-radius: 5px;
+ flex-direction: column;
+ align-items: center;
+}
+
+.profile-desc {
+ align-self: baseline;
+ margin-left: 20px;
+}
+
+/* styling untuk footer web */
+
+footer {
+ padding: 5px 5px 5px 20px;
+ color: white;
+ background-color: #3D5A80;
+ font-weight: bold;
+}
+
+/* media query */
+@media (min-width: 800px) {
+
+ .nav-wrapper,
+ .nav-list {
+  display: flex;
+ }
+
+ .nav-wrapper {
+  flex-direction: column;
+  align-items: center;
+ }
+}
+
+@media (max-width: 800px) {
+ .profile {
+  justify-content: center;
+  text-align: center;
+ }
+
+ .profile-desc {
+  flex-direction: row;
+ }
+}
+
+@media (min-width: 1025px) {
+ .nav-wrapper {
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+ .profile {
+  flex-direction: row;
+  justify-content: start;
+  text-align: start;
+ }
+}

@@ -1,0 +1,114 @@
+/* import css library */
+@import "normalize.css";
+@import "skeleton.css";
+@import "../../node_modules/leaflet/dist/leaflet.css";
+
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+* {
+ box-sizing: border-box;
+}
+
+/* loading related */
+
+.hidden {
+ display: none;
+}
+
+/* common styling (jumbotron + footer) */
+
+.jumbotron {
+ background-color: #1EAEDB;
+ text-align: center;
+ color: white;
+ padding: 3%;
+}
+
+.jumbotron h1 {
+ text-transform: uppercase;
+ letter-spacing: .1rem;
+ font-size: 2.25em;
+}
+
+footer {
+ padding: 10px;
+ color: white;
+ background-color: #1EAEDB;
+ font-weight: bold;
+}
+
+footer.fixed {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ display: inline-block;
+}
+
+/* navbar */
+.navbar {
+ z-index: 9999;
+ /* z-index for covering leaflet maps*/
+ position: sticky;
+ top: 0;
+ display: block;
+ text-align: center;
+ width: 100%;
+ background-color: white;
+ color: #1EAEDB;
+ border-bottom: 1px solid #eee;
+}
+
+.navbar>.nav-container {
+ width: 100%;
+}
+
+.nav-container>h1 {
+ padding: 5px;
+ text-transform: uppercase;
+ letter-spacing: .1rem;
+ font-size: 1.5em;
+ font-weight: 600;
+ margin-bottom: 0;
+ line-height: 4.5rem;
+ border-top: 1px solid #eee;
+ border-bottom: 1px solid #eee;
+}
+
+.navbar-list {
+ display: inline-block;
+ list-style: none;
+ margin-bottom: 0;
+}
+
+.navbar-item {
+ display: inline;
+}
+
+.navbar-link {
+ text-transform: uppercase;
+ font-size: 0.7em;
+ font-weight: 600;
+ letter-spacing: .2rem;
+ padding: 0 5px;
+ text-decoration: none;
+ line-height: 4.5rem;
+ text-align: center;
+
+}
+
+.navbar-link:hover {
+ color: black;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+ position: fixed;
+ top: 0;
+ width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.with-sticky-nav {
+ margin-top: 120px;
+}
